@@ -1,0 +1,233 @@
+*{
+    margin:0;
+}
+
+@font-face {
+    font-family: "Exo2"; 
+    src: url(res/exo2.otf) format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    } 
+
+@font-face {
+    font-family: "TrebuchetMS"; 
+    src: url(res/TrebuchetMS.ttf) format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+        
+@font-face {
+    font-family: "TrebuchetMS_Bold"; 
+    src: url(res/TrebuchetMS_Bold.ttf) format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@media (min-width: 1110px) { 
+    .market{
+        max-width: 1110px;
+        margin: 0 auto;
+    
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content:space-between;
+    }
+}
+
+@media (min-width: 761px) and (max-width: 1160px) { 
+    .market{
+        max-width: 760px;
+        margin: 0 auto;
+    
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content:space-between;
+    }
+}
+
+@media (max-width: 760px) { 
+    .market{
+       max-width: 380px; 
+
+        margin: 0 auto;
+    
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content:space-between;
+    }
+}
+
+body{
+    margin: 0;    
+    background-image: url(res/Wallpaper-pattern.jpg); /* Путь к фоновому рисунку */
+    background-size: 70px;
+    background-position: left bottom; /* Положение фона */
+    background-repeat: repeat; /* Повторяем фон по горизонтали */
+
+    margin-bottom: 20px;
+}
+
+.header__message{
+    font-family: Exo2;
+    color: white;
+    font-size: 36pt;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+.market{
+    /* max-width: 1120px;
+    min-width: 380px; */
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /* минус: последние элементы хотят в центр тоже */
+    /* justify-content:center;  */
+
+    /* минус: последние элементы хотят в центр тоже */
+    /* justify-content:space-between; */
+
+    /* минус: слишком большое расстояние между элементами. НУЖНО придумать, как его уменьшить при достижении предела*/
+    justify-content:space-between;
+}
+
+.unit{
+    /* flex: 1 1 500px; */
+    margin: 0 25px 40px 25px;
+
+} 
+
+.unit-pack__wraper-border{
+    width: 320px; 
+    height: 480px;
+    border-radius: 15px;	
+    
+    background: 
+    linear-gradient(135deg, transparent 25px, #1698d9 0);
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.unit-pack__wraper{
+    width: 312px; 
+    height: 472px;
+    border-radius: 15px;	
+    
+    background: 
+    linear-gradient(135deg, transparent 25px, white 0);
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.unit-pack{
+    border-radius: 15px;
+    height: 100%;   
+        
+    background-image: url(res/cat.png);
+    background-size:  312px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.unit-pack-discription-logo__slogan{
+    font-family: Exo2;
+    font-size: 11.8pt;
+    color: #666666;
+
+    margin-top: 0;
+    padding-top:15px;
+    margin-bottom: 15px;
+}
+
+/* Пэддинг для текста слева */
+.unit-pack-discription-logo__slogan, .unit-pack-discription-logo__company-name, .unit-pack-discription-text__taste, .unit-pack-discription-text__num-portion, .unit-pack-discription-text__gift{
+    padding-left:45px
+}
+
+
+.unit-pack-discription-logo__company-name{
+    font-family: TrebuchetMS_Bold;
+    font-size: 36pt;
+}
+
+.unit-pack-discription-text__taste{
+    font-family: TrebuchetMS_Bold;
+    font-size: 18pt;
+}
+
+.unit-pack-discription-logo{
+    padding-bottom: 15px;
+}
+
+.unit-pack-discription-text__num-portion, .unit-pack-discription-text__gift{
+    font-family: TrebuchetMS;
+    font-size: 10pt;
+    color: #666666;
+}
+
+.bold{
+    font-family: TrebuchetMS_Bold;
+}
+
+.unit-pack-weight {
+    border-radius: 40px;
+    background-color: #1698d9;
+    height: 80px;
+    width: 80px;
+
+    color: white;
+    font-family: 'Trebuchet MS';
+
+    text-align: center;
+
+    /* display: table-cell; 
+    vertical-align: middle;  */
+
+    position:absolute; 
+    bottom:10px; 
+    right:10px;
+}
+
+.unit-pack-weight__value{
+    font-size: 30pt;
+
+    margin-top: 10px;
+}
+
+.unit-pack-weight__unit-type{
+    font-size: 14pt;
+    margin-top:-5px;
+}
+
+.unit__call-to-action{
+    font-family: 'TrebuchetMS';
+    font-size: 9.5pt;
+
+    color: white;
+    width: 320px;
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+.like-link{
+    cursor: pointer;
+    color: #1698d9;
+    border-bottom: 2px dashed #1698d9;
+}
